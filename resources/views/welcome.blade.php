@@ -38,6 +38,7 @@
 </head>
 
 <body>
+@include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9%22])
 <br>
 <div class="container glass-container">
 

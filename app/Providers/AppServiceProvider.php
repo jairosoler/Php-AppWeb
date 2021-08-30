@@ -20,7 +20,6 @@ class AppServiceProvider extends ServiceProvider
 
             return new Client([
                 'base_uri' => 'http://54.163.147.33:8080/',
-                //'base_uri' => 'https://jsonplaceholder.typicode.com',
                 'timeout' => 10.0,
             ]);
 
