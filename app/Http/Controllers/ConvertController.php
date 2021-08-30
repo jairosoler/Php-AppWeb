@@ -58,6 +58,7 @@ class ConvertController extends Controller{
        $data = json_decode($response->getBody()->getContents());
        $this->dowloandFile($data);
        unlink("../public/{$data->nombreArchivo}");
+       //toast('Descargando archivo...','success');
 
     }
 
