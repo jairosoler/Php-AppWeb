@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/doc', [ConvertController::class, 'convertDocx'])->name('docx');
+Route::POST('/doc', [ConvertController::class, 'convertDocx'])->name('convertidor');
