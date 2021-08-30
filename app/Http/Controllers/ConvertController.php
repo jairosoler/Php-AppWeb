@@ -37,26 +37,34 @@ class ConvertController extends Controller{
 
 
         //ENVIO DE PETICION AL SERVIDOR
-       $response = $this->cliente->request('POST', 'convertir',
-            ['json' =>
-               [
-                   'base64' => $archivoComoBase64,
-                   'extencionDestino' => $ext_destino,
-                   'extencionFuente' => $ext_origen,
-                   'nombreArchivo' => $nombre_archvio
-               ]
-           ]
-        );
+        try {
+
+            $response = $this->cliente->request('POST', 'convertir',
+                ['json' =>
+                    [
+                        'base64' => $archivoComoBase64,
+                        'extencionDestino' => $ext_destino,
+                        'extencionFuente' => $ext_origen,
+                        'nombreArchivo' => $nombre_archvio
+                    ]
+                ]
+            );
+
+        } catch (\Exception $e) {
+            toast('Extenciones no esta disponible','error');
+            return back();
+        }
 
        $data = json_decode($response->getBody()->getContents());
-       $this->dowloandFile($data, $ext_destino);
+       $this->dowloandFile($data);
+       unlink("../public/{$data->nombreArchivo}");
 
     }
 
-    public function dowloandFile($data, $ext_destino)
+    public function dowloandFile($data)
     {
+        $nombre_final = $data->nombreArchivo;
         $data_b64 = base64_decode($data->base64);
-        $nombre_final = 'salida.' . strtolower($ext_destino);
         file_put_contents($nombre_final, $data_b64);
 
 
