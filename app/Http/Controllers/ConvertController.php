@@ -7,7 +7,8 @@ use GuzzleHttp\Client;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
-class ConvertController extends Controller{
+class ConvertController extends Controller
+{
 
 
     protected $cliente;
@@ -27,17 +28,16 @@ class ConvertController extends Controller{
 
         $ext_origen = $request->file('archivo')->getClientOriginalExtension();
 
-        if(!$this->extensionData($ext_origen)){
-            toast('Documento no permitido','error');
+        if (!$this->extensionData($ext_origen)) {
+            toast('Documento no permitido', 'error');
             return back();
         }
 
 
-       //OBETENEMOS LA DATA PRINCIPAL DEL ARCHIVO DE ENTRADA
-        $ruta_archvio  = $request->file('archivo')->path();
-        $nombre_archvio  = $request->file('archivo')->getClientOriginalName();
+        //OBETENEMOS LA DATA PRINCIPAL DEL ARCHIVO DE ENTRADA
+        $ruta_archvio = $request->file('archivo')->path();
+        $nombre_archvio = $request->file('archivo')->getClientOriginalName();
         $ext_destino = $request->input('formato');
-
 
 
         //CONVERSION DE ARCHIVO A BASE_64
@@ -60,14 +60,14 @@ class ConvertController extends Controller{
             );
 
         } catch (\Exception $e) {
-            toast('Extenciones no esta disponible','error');
+            toast('Extenciones no esta disponible', 'error');
             return back();
         }
 
-       $data = json_decode($response->getBody()->getContents());
-       $this->dowloandFile($data);
-       unlink("../public/{$data->nombreArchivo}");
-       //toast('Descargando archivo...','success');
+        $data = json_decode($response->getBody()->getContents());
+        $this->dowloandFile($data);
+        unlink("../public/{$data->nombreArchivo}");
+        //toast('Descargando archivo...','success');
 
     }
 
@@ -81,7 +81,7 @@ class ConvertController extends Controller{
         if (file_exists($nombre_final)) {
             header('Content-Description: File Transfer');
             header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename="'.basename($nombre_final).'"');
+            header('Content-Disposition: attachment; filename="' . basename($nombre_final) . '"');
             header('Expires: 0');
             header('Cache-Control: must-revalidate');
             header('Pragma: public');
@@ -93,21 +93,23 @@ class ConvertController extends Controller{
 
     }
 
-    protected function validateData(Request $request){
+    protected function validateData(Request $request)
+    {
 
         $request->validate([
-            'archivo' =>  ['required']
+            'archivo' => ['required']
         ]);
 
     }
 
-    protected function extensionData($ext){
+    protected function extensionData($ext)
+    {
 
-        $extensiones = [ 'docx', 'xlsx' , 'pptx', 'odp' , 'ods' , 'odt'];
+        $extensiones = ['docx', 'xlsx', 'pptx', 'odp', 'ods', 'odt'];
 
 
-        foreach($extensiones as $item) {
-            if($item == $ext){
+        foreach ($extensiones as $item) {
+            if ($item == $ext) {
                 return true;
             }
         }
@@ -115,7 +117,4 @@ class ConvertController extends Controller{
         return false;
 
     }
-
-
-
 }
