@@ -1,64 +1,51 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## DoConver 
+_Es un Software web que convierte ficheros en formato Microsoft a ficheros en formato abierto (ODF Open Document Format) y viceversa y a formato PDF (Portable Document Format):_
+- Documentos .DOCX y .ODT
+- Documentos .XLSX y .ODS
+- Documentos .PPTX y ODP
+- Cualquier de los formatos anteriores a PDF.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Comenzando 🚀
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-## About Laravel
+## Pre-requisitos 📋
+- **[Laragon](https://laragon.org/)**
+- **[Laravel](https://laravel.com/docs/8.x/installation)**
+- **[PHP](https://www.php.net/downloads.php)**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Instalación 🔧
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+_Para obtener DoConver debes seguir los siguientes pasos_
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+_Primero debemos clonar el proyecto_
+```
+git clone https://github.com/Arquitectura-de-software-UFPS-2021-2/Php-AppWeb.git
+```
+_Una vez tengamos el proyecto localmente y teniendo instaladas las dependencias necesarias, cargamos el proyecto a [laragon](https://laragon.org/docs/easy-to-use.html)_
 
-## Learning Laravel
+_Ejecutamos el servidor desde el laragon y listo_
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Construido con 🛠️
+- Bootstrap/UiKit - [Diseño de vistas](https://github.com/Ivancito-ur/front-conversor-php) 
+- Laravel 7.0 - Framework web
+- PHP 7.4 - Lemguaje
+- Laragon - Permite crear entornos de desarrollo
 
-## Laravel Sponsors
+## Contribuyendo 🖇️
+_Este es un proyecto open-source y nos interesa que lo apoyes haciendo cualquier contribución o mejora al código._ 🤓
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Autores ✒️
+- Gabriel Arturo - [gabrielgarcia2211](https://github.com/gabrielgarcia2211)
+- Ivan Uribe - [Ivancito-ur](https://github.com/Ivancito-ur)
+- Daniel Calderon [Danielcaos](https://github.com/Danielcaos)
+- Jairo Moises Soler
 
-### Premium Partners
+## Licencia 📄
+_Este proyecto está bajo la Licencia ISC_ 📄
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+## Expresiones de Gratitud 🎁
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
