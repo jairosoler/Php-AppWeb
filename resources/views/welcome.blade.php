@@ -77,8 +77,8 @@
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="text" name="formato">
                     <option selected>Seleccione el formato</option>
                     <option>ODT</option>
-                    <option>OPT</option>
-                    <option>OST</option>
+                    <option>ODP</option>
+                    <option>ODS</option>
                     <option>PDF</option>
                     <option>DOCX</option>
                     <option>PPTX</option>

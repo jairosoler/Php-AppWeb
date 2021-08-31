@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
 
             return new Client([
                 'base_uri' => 'http://54.163.147.33:8080/',
-                'timeout' => 10.0,
+                'timeout' => 30.0,
             ]);
 
         });

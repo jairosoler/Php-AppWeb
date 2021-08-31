@@ -24,11 +24,20 @@ class ConvertController extends Controller{
 
         $this->validateData($request);
 
+
+        $ext_origen = $request->file('archivo')->getClientOriginalExtension();
+
+        if(!$this->extensionData($ext_origen)){
+            toast('Documento no permitido','error');
+            return back();
+        }
+
+
        //OBETENEMOS LA DATA PRINCIPAL DEL ARCHIVO DE ENTRADA
         $ruta_archvio  = $request->file('archivo')->path();
         $nombre_archvio  = $request->file('archivo')->getClientOriginalName();
         $ext_destino = $request->input('formato');
-        $ext_origen = $request->file('archivo')->getClientOriginalExtension();
+
 
 
         //CONVERSION DE ARCHIVO A BASE_64
@@ -87,8 +96,23 @@ class ConvertController extends Controller{
     protected function validateData(Request $request){
 
         $request->validate([
-            'archivo' => 'required|mimes:docx,odt,pptx,opt',
+            'archivo' =>  ['required']
         ]);
+
+    }
+
+    protected function extensionData($ext){
+
+        $extensiones = [ 'docx', 'xlsx' , 'pptx', 'odp' , 'ods' , 'odt'];
+
+
+        foreach($extensiones as $item) {
+            if($item == $ext){
+                return true;
+            }
+        }
+
+        return false;
 
     }
 
