@@ -43,8 +43,8 @@ class ConvertController extends Controller{
                 ['json' =>
                     [
                         'base64' => $archivoComoBase64,
-                        'extencionDestino' => $ext_destino,
-                        'extencionFuente' => $ext_origen,
+                        'extensionDestino' => $ext_destino,
+                        'extensionFuente' => $ext_origen,
                         'nombreArchivo' => $nombre_archvio
                     ]
                 ]
@@ -87,7 +87,7 @@ class ConvertController extends Controller{
     protected function validateData(Request $request){
 
         $request->validate([
-            'archivo' => 'required|mimes:docx,odt',
+            'archivo' => 'required|mimes:docx,odt,pptx,opt',
         ]);
 
     }
