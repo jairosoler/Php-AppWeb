@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(Client::class, function() {
 
             return new Client([
-                'base_uri' => 'http://54.163.147.33:8080/',
+                'base_uri' =>  $baseUrl,
                 'timeout' => 30.0,
             ]);
 
